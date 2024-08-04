@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --main-color: #FF4C60;
+    --font-color: #353353;
+    --bg-color: #F9F9FF;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    overflow-x: hidden;
+}
+
+.nav-list li {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+nav {
+    color: var(--font-color);
+}
+
+.active {
+    color: var(--main-color);
+}
+
+.bg-home {
+    background-image: url(../src/assets/bg-hero.png);
+    transition: 0.5s all;
+}
+
+.bg-home:hover {
+    transform: translate(10px, 10px);
+
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.bg-home p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.line {
+    background-color: var(--font-color);
+    height: .125rem;
+    width: 2.5rem;
+}
+
+.btn-custom {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: .75rem 2rem;
+    border-radius: 1.875rem;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btn-custom:hover {
+    animation: button-push linear 0.3s;
+}
+
+@keyframes button-push {
+    50% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.curser-pointer {
+    cursor: pointer;
+}
+
+.icon i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+
+.icon i:hover{
+    color: var(--main-color)
+}
+
+body.dark {
+    --bg-color: #353353;
+    --font-color: #F9F9FF;
+}
+
+.navIcon {
+    font-size: 1.5rem;
+}
+.closeModel {
+    right: -3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .closeModel {
+        right: 0;
+        top: -2rem;
+    }
+}
+
+.layer {
+    color: #fff;
+    background: rgba(108, 108, 229, 0.8);
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.4s all;
+
+}
+
+.type {
+    background: var(--main-color);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 14px;
+    display: inline-block;
+    padding: 3px 10px;
+    top: 0;
+    left: 20px;
+    transform: translate(30px, -40px);
+    transition: all 0.4s;
+}
+
+.layer h2 {
+    font-size: 1.25rem;
+    transform: translateY(4rem);
+    padding: 0 20px;
+    transition: 0.4s all;
+}
+.layer i {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #ffc80a;
+    color: #fff;
+}
+
+.image {
+    overflow: hidden;
+    box-shadow: 2px 2px 10px  rgba(53, 51, 83,0.8);
+}
+nav,.footer{
+    box-shadow: 2px 2px 10px  rgba(53, 51, 83,0.8); 
+}
+
+.image:hover .type {
+    transform: translate(30px, 0);
+}
+.image:hover .layer{
+    opacity: 1;
+}
+
+.image:hover h2 {
+    transform: translateY(3rem);
+}
+.footer .icon i{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: var(--font-color);
+    border: 2px solid var(--font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+}
+ .footer .icon i:hover{
+color: var(--main-color);
+border-color: var(--main-color);
+}
+.about p{
+    color: #353353;
+    font-weight:400;
+     font-size: 16px;
+}
+.about .title{
+    font-weight: 500;
+    font-size: 16px;
+    color:#454360;
+}
+.details:before{
+    content: "";
+        width:0 ;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 15px solid #FFF;
+        position: absolute;
+        left: -15px;
+        top: 20%;
+}
+.counter h2{
+    font-size: 1.5rem;
+}
+.bg-contact{
+    background-image: url(../src/assets/map.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 400px;
+}
+input,textarea{
+    border-radius: 30px;
+    padding: 10px 30px;
+    color: #353353;
+}
+.bg-contact  i,label span{
+ color: var(--main-color);
+}
+label span{
+    transition: 0.4s all;
+}
+
+
+
